@@ -8,9 +8,14 @@ const {
     deletePerson,
 } = require('../controllers/people')
 
+
 router.get("/", getPeople)
 router.post("/", createPerson)
 router.put("/:id", updatePerson)
 router.delete("/:id", deletePerson)
+
+// alternative `chain` version of code above
+// router.route('/').get(getPeople).post(createPerson)
+// router.route('/:id').put(updatePerson).delete(deletePerson)
 
 module.exports = router
