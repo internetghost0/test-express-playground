@@ -1,6 +1,7 @@
 const express = require('express')
-let { people } = require("../data.js")
 const router = express.Router()
+
+let { people } = require("../data.js")
 
 router.get("/", (req, res) => {
     res.status(201).json({ success: true, data: [...people] })
